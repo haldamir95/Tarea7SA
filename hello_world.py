@@ -8,7 +8,7 @@ def wrap_html(message):
         <body>
             <div style='font-size:80px;'>
             <center>
-                <image height="600" width="531" src="https://cdn-cf.gamivo.com/image_cover.jpg?f=122793&n=8795199287238464.jpg">
+                <image height="600" width="531" src="https://secure.meetupstatic.com/photos/event/2/a/a/3/600_452110915.jpeg">
                 <br>
                 {0}<br>
             </center>
@@ -19,7 +19,7 @@ def wrap_html(message):
 
 @app.route('/')
 def hello_world():
-    message = 'SA Tarea 7 201314733'
+    message = 'Hello PyLadies Chicago!'
     html = wrap_html(message)
     return html
 

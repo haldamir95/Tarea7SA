@@ -10,6 +10,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - 4c:9c:63:62:33:98:a1:c6:bd:cc:3d:d2:3e:28:39:34
+            - 69:a6:96:3a:d0:64:6a:46:5f:23:aa:bf:07:6f:97:ec
       - run:
           name: Setup VirtualEnv
           command: |
@@ -36,4 +37,4 @@ jobs:
       - run:
           name: Deploy app to Linode Producrion Server via Docker
           command: |
-            ssh -i private.pem haldamir.95@35.193.155.17 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
+            ssh -o StrictHostKeyChecking=no haldamir.95@34.66.22.213 "/bin/bash ./deploy_app.sh $DOCKER_LOGIN/$IMAGE_NAME:$TAG"
